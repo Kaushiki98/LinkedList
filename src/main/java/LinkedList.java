@@ -52,6 +52,28 @@ class LinkedList {
             }
         }
     }
+
+    //DELETE LAST ELEMENT IN THE LIST
+    public void deleteLastElement() {
+        if(head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        else {
+            if(head != tail ) {
+                Node current = head;
+                while(current.next != tail) {
+                    current = current.next;
+                }
+                tail = current;
+                tail.next = null;
+            }
+            else {
+                head = tail = null;
+            }
+        }
+    }
+
     //TO DISPLAY ELEMENTS
     public void show() {
         Node n = head;
