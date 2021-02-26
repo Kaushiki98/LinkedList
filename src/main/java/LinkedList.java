@@ -37,13 +37,30 @@ class LinkedList {
         }
         size++;
     }
+
+    //TO DELETE FIRST ELEMENT IN THE LIST
+    public void deleteFirstElement() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        } else {
+            if (head != tail) {
+                head = head.next;
+            } else {
+                head = tail = null;
+            }
+        }
+    }
     //TO DISPLAY ELEMENTS
     public void show() {
         Node n = head;
         while (n.next != null) {
+            System.out.println("Data : " + n.data);
+            n = n.next;
+        }
         System.out.println("Data : " + n.data);
-        n = n.next;
     }
-    System.out.println("Data : " + n.data);
-    }
+
+
 }

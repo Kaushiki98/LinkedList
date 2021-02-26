@@ -11,6 +11,7 @@ class Node{
         add.append(56);
         add.append(70);
         add.addInMid(30);
+        add.deleteFirstElement();
         add.show();
     }
 }
